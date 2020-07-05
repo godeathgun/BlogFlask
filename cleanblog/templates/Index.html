@@ -1,0 +1,25 @@
+{% extends "layouts.html" %}
+{% block content %}
+<div class="col-lg-8 col-md-10 mx-auto">
+    {% for post in posts %}
+    <div class="post-preview">
+        <a href="post.html">
+            <h2 class="post-title">
+                {{post.title}}
+            </h2>
+            <h3 class="post-subtitle">
+                {{post.title}}
+            </h3>
+        </a>
+        <p class="post-meta"> Posted by
+            {{post.author}}
+            on {{post.date_posted}}</p>
+    </div>
+    <hr>
+    {% endfor %}
+    <!-- Pager -->
+    <div class="clearfix">
+        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+    </div>
+</div>
+{% endblock content %}
